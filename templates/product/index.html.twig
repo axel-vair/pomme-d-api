@@ -3,7 +3,21 @@
 {% block title %}Produits{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
-    <h1>Tous les produits</h1>
-</div>
+    <div class="example-wrapper">
+        <h1>Tous les produits</h1>
+        <ul>
+            {% for product in products.products %}
+                {% if product.product_name is defined %}
+                    <li>{{ product.product_name }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        {# Affichage de la pagination #}
+        <div class="pagination">
+            {% for page in 1..products.page_count %}
+                <a href="{{ path('app_products', {'page': page}) }}" {% if currentPage == page %}class="active"{% endif %}>{{ page }}</a>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
