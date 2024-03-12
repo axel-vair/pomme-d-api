@@ -8,16 +8,31 @@
         <ul>
             {% for product in products.products %}
                 {% if product.product_name is defined %}
-                    <li>{{ product.product_name }}</li>
+                    <li>{{ product.product_name }} - Nutrition score:{{ product.nutrition_grades }}</li>
                 {% endif %}
             {% endfor %}
         </ul>
 
-        {# Affichage de la pagination #}
         <div class="pagination">
-            {% for page in 1..products.page_count %}
-                <a href="{{ path('app_products', {'page': page}) }}" {% if currentPage == page %}class="active"{% endif %}>{{ page }}</a>
+            {% set num_pages_to_display = 5 %}
+            {% set current_page = products.page %}
+            {% set first_page = max(current_page - (num_pages_to_display // 2), 1) %}
+            {% set last_page = min(first_page + num_pages_to_display - 1, products.page_count) %}
+
+            {% if first_page > 1 %}
+                <a href="{{ path('app_products', {'page': 1}) }}">1</a>
+                {% if first_page > 2 %}...{% endif %}
+            {% endif %}
+
+            {% for page in first_page..last_page %}
+                <a href="{{ path('app_products', {'page': page}) }}" {% if current_page == page %}class="active"{% endif %}>{{ page }}</a>
             {% endfor %}
+
+            {% if last_page < products.page_count %}
+                {% if last_page < products.page_count - 1 %}...{% endif %}
+                <a href="{{ path('app_products', {'page': products.page_count}) }}">{{ products.page_count }}</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
+

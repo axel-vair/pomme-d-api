@@ -17,7 +17,7 @@ class CallApiService
     {
         $response = $this->client->request('GET', 'https://world.openfoodfacts.net/api/v2/search', [
             'query' => [
-                'page_size' => 1000,
+                'page_size' => 2000,
                 'page' => $page,
                 'fields' => 'product_name,nutrition_grades',
             ]
