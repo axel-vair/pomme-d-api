@@ -13,32 +13,34 @@
 
 {% block body %}
     <div class="card card-success">
-        <div class="card-body pb-0">
-            <div class="row">
-                {% for movie in movies['results'] %}
-                    <div class="col-md-12 col-lg-6 col-xl-4">
-                        <a href="{{ path('app_movie_details', {movie_id: movie['id']})}}">
-                            <div class="card mb-2 bg-gradient-dark">
-                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
-                                     alt="Dist Photo 1">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <h5 class="card-title text-primary text-white">
-                                        {% if movie['name'] is defined %}
-                                            <h2>{{ movie['name'] }}</h2>
-                                        {% elseif movie['title'] is defined %}
-                                            <h2>{{ movie['title'] }}</h2>
-                                        {% else %}
-                                            <h2>Titre inconnu</h2>
-                                        {% endif %}
-                                    </h5>
+        <turbo-frame id="movies">
+            <div class="card-body pb-0">
+                <div class="row">
+                    {% for movie in movies['results'] %}
+                        <div class="col-md-12 col-lg-6 col-xl-4">
+                            <a href="{{ path('app_movie_details', {movie_id: movie['id']}) }}">
+                                <div class="card mb-2 bg-gradient-dark">
+                                    <img class="card-img-top"
+                                         src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
+                                         alt="Dist Photo 1">
+                                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                        <h5 class="card-title text-primary text-white">
+                                            {% if movie['name'] is defined %}
+                                                <h2>{{ movie['name'] }}</h2>
+                                            {% elseif movie['title'] is defined %}
+                                                <h2>{{ movie['title'] }}</h2>
+                                            {% else %}
+                                                <h2>Titre inconnu</h2>
+                                            {% endif %}
+                                        </h5>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
+                            </a>
+                        </div>
+                    {% endfor %}
 
+                </div>
+            </div>
         <nav class="d-flex justify-content-center" aria-label="Page navigation">
             <ul class="pagination">
                 {% if movies.page > 1 %}
@@ -46,7 +48,8 @@
                         <a class="page-link" href="{{ path('app_movies', {'page': 1}) }}">Première</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="{{ path('app_movies', {'page': movies.page - 1}) }}">Précédent</a>
+                        <a class="page-link"
+                           href="{{ path('app_movies', {'page': movies.page - 1}) }}">Précédent</a>
                     </li>
                 {% endif %}
 
@@ -67,7 +70,6 @@
                 {% endif %}
             </ul>
         </nav>
-
-
+        </turbo-frame>
     </div>
 {% endblock %}
