@@ -1,0 +1,72 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}
+    Les séries
+{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Toutes les séries</li>
+    </ol>
+{% endblock %}
+
+{% block body %}
+    <div class="card card-success">
+        <div class="card-body pb-0">
+            <div class="row">
+                {% for serie in series['results'] %}
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <a href="{{ path('app_serie_details', {'series_id': serie['id']}) }}">
+                            <div class="card mb-2 bg-gradient-dark">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ serie['backdrop_path'] }}"
+                                     alt="Dist Photo 1">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                     {{ serie['id'] }}
+                                    <h5 class="card-title text-primary text-white">
+                                        {% if serie['name'] is defined %}
+                                            <h2>{{ serie['name'] }}</h2>
+                                        {% elseif serie['title'] is defined %}
+                                            <h2>{{ serie['title'] }}</h2>
+                                        {% else %}
+                                            <h2>Titre inconnu</h2>
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <nav class="d-flex justify-content-center" aria-label="Page navigation">
+            <ul class="pagination">
+                {% if series.page > 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_series', {'page': 1}) }}">Première</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_series', {'page': series.page - 1}) }}">Précédent</a>
+                    </li>
+                {% endif %}
+
+                {% set startPage = max(1, series.page - 2) %}
+                {% set endPage = min(series.total_pages, startPage + 4) %}
+                {% set startPage = max(1, endPage - 4) %}
+
+                {% for i in startPage..endPage %}
+                    <li class="page-item {% if i == series.page %}active{% endif %}">
+                        <a class="page-link" href="{{ path('app_series', {'page': i}) }}">{{ i }}</a>
+                    </li>
+                {% endfor %}
+
+                {% if series.page < series.total_pages %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_series', {'page': series.page + 1}) }}">Suivant</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}

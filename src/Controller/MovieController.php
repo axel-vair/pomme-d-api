@@ -43,5 +43,27 @@ class MovieController extends AbstractController
         ]);
     }
 
+    #[Route('/series', name: 'app_series')]
+    public function getAllSeries(Request $request, CallApiService $callApiService)
+    {
+        $page = $request->query->getInt('page', 1);
+        $series = $callApiService->getAllSeries($page);
+
+        return $this->render('series/series.html.twig', [
+            'series' => $series
+        ]);
+    }
+
+    #[Route('/series/details/{series_id}', name: 'app_serie_details')]
+    public function seriesDetails($series_id, CallApiService $callApiService)
+    {
+        $serie = $callApiService->getSeriesDetails($series_id);
+
+        return $this->render('series/details.html.twig', [
+            'serie' => $serie
+        ]);
+    }
+
+
 
 }

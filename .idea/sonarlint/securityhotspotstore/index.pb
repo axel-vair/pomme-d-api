@@ -27,3 +27,9 @@ Q
 !templates/movies/series.html.twig,2/2/22a7b92e3448a7510c127e518d3f5f34aa8f2749
 Q
 !templates/movies/movies.html.twig,c/c/ccbe417b0eadc3c7d2e6327a7ab9c59eea50e195
+Q
+!templates/series/series.html.twig,4/c/4c9f6059b54f26417c36d7f22d25d073b5e9c061
+P
+ templates/series/index.html.twig,f/7/f7e081849f5739ea2626d4cd63c65bcad43fcc8f
+R
+"templates/series/details.html.twig,4/a/4a3700157d9e48161b8e6801d127173667b9d8a6

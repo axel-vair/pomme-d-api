@@ -48,6 +48,17 @@ class CallApiService
         return $response->toArray();
     }
 
+    public function getSeriesDetails($series_id)
+    {
+        $response = $this->client->request('GET', "https://api.themoviedb.org/3/tv/{$series_id}?language=fr-FR", [
+            'headers' => [
+                'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
+                'accept' => 'application/json',
+            ]
+        ]);
+
+        return $response->toArray();
+    }
 
     public function getAllMovies($page = 1)
     {
@@ -57,6 +68,19 @@ class CallApiService
                 'accept' => 'application/json',
             ]
         ]);
+
+        return $response->toArray();
+    }
+
+    public function getAllSeries($page = 1)
+    {
+        $response = $this->client->request('GET', "https://api.themoviedb.org/3/tv/popular?language=fr-FR&page={$page}", [
+            'headers' => [
+                'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
+                'accept' => 'application/json',
+            ]
+        ]);
+
 
         return $response->toArray();
     }

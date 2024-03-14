@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block breadcrumb %}
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Details</li>
+    </ol>
+{% endblock %}
+{% block body %}
+    <div class="col">
+        <div class="card">
+            <div class="d-flex justify-content-center mt-2">
+                <img src="https://image.tmdb.org/t/p/w500/{{ serie['backdrop_path'] }}" alt="Backdrop">
+            </div>
+
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Titre original</dt>
+                    <dd class="col-sm-8">{{ serie['original_name'] }}</dd>
+
+                    <dt class="col-sm-4">Genres</dt>
+                    <dd class="col-sm-8">
+                        {% for genre in serie['genres'] %}
+                            {{ genre['name'] }}
+                            {% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </dd>
+
+                    <dt class="col-sm-4">Première diffusion</dt>
+                    <dd class="col-sm-8">{{ serie['first_air_date']|date('d M Y') }}</dd>
+
+                    <dt class="col-sm-4">Nombre de saisons</dt>
+                    <dd class="col-sm-8">{{ serie['number_of_seasons'] }}</dd>
+
+                    <dt class="col-sm-4">Nombre d'épisodes</dt>
+                    <dd class="col-sm-8">{{ serie['number_of_episodes'] }}</dd>
+
+                    <dt class="col-sm-4">Statut</dt>
+                    <dd class="col-sm-8">{{ serie['status'] }}</dd>
+
+                    <dt class="col-sm-4">Votes</dt>
+                    <dd class="col-sm-8">{{ serie['vote_average'] }} / 10 ({{ serie['vote_count'] }} votes)</dd>
+
+                    <dt class="col-sm-4">Page d'accueil</dt>
+                    <dd class="col-sm-8">
+                        {% if serie['homepage'] %}
+                            <a href="{{ serie['homepage'] }}">{{ serie['homepage'] }}</a>
+                        {% else %}
+                            Non spécifié
+                        {% endif %}
+                    </dd>
+
+                    <dt class="col-sm-4">Langues</dt>
+                    <dd class="col-sm-8">
+                        {% for language in serie['languages'] %}
+                            {{ language }}
+                            {% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </dd>
+
+                </dl>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
