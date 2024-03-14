@@ -25,4 +25,8 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    'admin-lte/dist/css/adminlte.min.css' => [
+        'version' => '3.2.0',
+        'type' => 'css',
+    ],
 ];

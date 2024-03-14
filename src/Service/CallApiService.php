@@ -13,16 +13,16 @@ class CallApiService
         $this->client = $client;
     }
 
-    public function getAllProducts($page = 1): array
+    public function getAllMovies()
     {
-        $response = $this->client->request('GET', 'https://world.openfoodfacts.net/api/v2/search', [
-            'query' => [
-                'page_size' => 2000,
-                'page' => $page,
-                'fields' => 'product_name,nutrition_grades',
-            ]
+        $response = $this->client->request('GET', 'https://api.themoviedb.org/3/discover/movie', [
+            'headers' => [
+                'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
+                'accept' => 'application/json',
+            ],
         ]);
-
         return $response->toArray();
     }
 }
+
+

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Films{% endblock %}
+
+
+
+{% block body %}
+    <div class="card card-success">
+        <div class="card-body pb-0">
+            <div class="row">
+                {% for movie in movies['results'] %}
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card mb-2 bg-gradient-dark">
+                            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
+                                 alt="Dist Photo 1">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <h5 class="card-title text-primary text-white">
+                                    {% if movie['name'] is defined %}
+                                        <h2>{{ movie['name'] }}</h2>
+                                    {% elseif movie['title'] is defined %}
+                                        <h2>{{ movie['title'] }}</h2>
+                                    {% else %}
+                                        <h2>Titre inconnu</h2>
+                                    {% endif %}</h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
