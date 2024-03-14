@@ -15,12 +15,36 @@ class CallApiService
 
     public function getAllMovies()
     {
-        $response = $this->client->request('GET', 'https://api.themoviedb.org/3/discover/movie', [
+        $response = $this->client->request('GET', 'https://api.themoviedb.org/3/trending/movie/day?language=fr-FR', [
             'headers' => [
                 'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
                 'accept' => 'application/json',
             ],
         ]);
+        return $response->toArray();
+    }
+
+    public function getAllSeries()
+    {
+        $response = $this->client->request('GET', 'https://api.themoviedb.org/3/trending/tv/day?language=fr-FR', [
+            'headers' => [
+                'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
+                'accept' => 'application/json',
+            ]
+        ]);
+
+        return $response->toArray();
+    }
+
+    public function getMovieDetails($movie_id)
+    {
+        $response = $this->client->request('GET', "https://api.themoviedb.org/3/movie/{$movie_id}?language=fr-FR", [
+            'headers' => [
+                'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
+                'accept' => 'application/json',
+            ]
+        ]);
+
         return $response->toArray();
     }
 }

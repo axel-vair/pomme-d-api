@@ -2,31 +2,63 @@
 
 {% block title %}Films{% endblock %}
 
-
-
 {% block body %}
     <div class="card card-success">
         <div class="card-body pb-0">
+            <h2>Les films</h2>
             <div class="row">
                 {% for movie in movies['results'] %}
                     <div class="col-md-12 col-lg-6 col-xl-4">
-                        <div class="card mb-2 bg-gradient-dark">
-                            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
-                                 alt="Dist Photo 1">
-                            <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <h5 class="card-title text-primary text-white">
-                                    {% if movie['name'] is defined %}
-                                        <h2>{{ movie['name'] }}</h2>
-                                    {% elseif movie['title'] is defined %}
-                                        <h2>{{ movie['title'] }}</h2>
-                                    {% else %}
-                                        <h2>Titre inconnu</h2>
-                                    {% endif %}</h5>
+                        <a href="{{ path('app_movie_details', {movie_id: movie['id']})}}">
+                            <div class="card mb-2 bg-gradient-dark">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
+                                     alt="Dist Photo 1">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                    <h5 class="card-title text-primary text-white">
+                                        {% if movie['name'] is defined %}
+                                            <h2>{{ movie['name'] }}</h2>
+                                        {% elseif movie['title'] is defined %}
+                                            <h2>{{ movie['title'] }}</h2>
+                                        {% else %}
+                                            <h2>Titre inconnu</h2>
+                                        {% endif %}
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 {% endfor %}
+            </div>
+        </div>
+    </div>
 
+    <div class="card card-success">
+        <div class="card-body pb-0">
+            <h2>Les séries</h2>
+            <div class="row">
+                {% for serie in series['results'] %}
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+{#
+                        <a href="{{ path('serie_detail', {'id': serie['id']}) }}" class="text-decoration-none text-reset">
+#}
+                            <div class="card mb-2 bg-gradient-dark">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ serie['backdrop_path'] }}"
+                                     alt="Dist Photo 1">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                    <h5 class="card-title text-primary text-white">
+                                        {% if serie['name'] is defined %}
+                                            <h2>{{ serie['name'] }}</h2>
+                                        {% elseif serie['title'] is defined %}
+                                            <h2>{{ serie['title'] }}</h2>
+                                        {% else %}
+                                            <h2>Titre inconnu</h2>
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

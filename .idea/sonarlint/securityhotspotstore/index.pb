@@ -19,3 +19,9 @@ P
 assets/app.js,8/6/8651bd0a7d84f9f6460894ab6b5ff212648386c4
 H
 templates/base.html.twig,f/f/ffb3f1cfd73fdec1f0c80c63d0b5bbc1fff22022
+R
+"templates/movies/details.html.twig,a/6/a6de54582c633817a5a08e0ed65be3472ebfc4af
+P
+ templates/movies/films.html.twig,1/c/1cf4dede36600520e1cb02417b7f350c5a6325fa
+Q
+!templates/movies/series.html.twig,2/2/22a7b92e3448a7510c127e518d3f5f34aa8f2749

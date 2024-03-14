@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+       {% block breadcrumb %}
+           <ol class="breadcrumb float-sm-right">
+               <li class="breadcrumb-item"><a href="#">Home</a></li>
+               <li class="breadcrumb-item active">Details</li>
+           </ol>
+       {% endblock %}
+{% block body %}
+    <div class="col">
+        <div class="card">
+
+            <div class="d-flex justify-content-center">
+                <img src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}" alt="Backdrop">
+            </div>
+
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Titre original</dt>
+                    <dd class="col-sm-8">{{ movie['original_title'] }}</dd>
+
+                    <dt class="col-sm-4">Résumé</dt>
+                    <dd class="col-sm-8">{{ movie['overview'] }}</dd>
+
+                    <dt class="col-sm-4">Genres</dt>
+                    <dd class="col-sm-8">  {% for genre in movie['genres'] %} {{ genre['name'] }}{% endfor %}</dd>
+
+                    <dt class="col-sm-4">Sortie</dt>
+                    <dd class="col-sm-8">{{ movie['release_date']|date('D, d M Y') }}</dd>
+
+                    <dt class="col-sm-4">Budget</dt>
+                    <dd class="col-sm-8">{{ movie['budget'] }} $</dd>
+
+                    <dt class="col-sm-4">Durée</dt>
+                    <dd class="col-sm-8">{{ movie['runtime'] // 60 }} heures {{ movie['runtime'] % 60 }} minutes</dd>
+
+                    <dt class="col-sm-4">Votes</dt>
+                    <dd class="col-sm-8">{{ movie['vote_average'] }} / 10</dd>
+
+                    <dt class="col-sm-4">Revenue</dt>
+                    <dd class="col-sm-8">{{ movie['revenue'] }} $</dd>
+
+                    <dt class="col-sm-4">Production</dt>
+                    <dd class="col-sm-8">{% for production in movie['production_companies'] %}
+                            <p>{{ production['name'] }}</p>{% endfor %}</dd>
+
+                    <dt class="col-sm-4">Pays de production</dt>
+                    <dd class="col-sm-8"> {% for country in movie['production_countries'] %}
+                            <p>{{ country['name'] }}</p>{% endfor %}</dd>
+
+
+                </dl>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
