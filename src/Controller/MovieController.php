@@ -54,10 +54,10 @@ class MovieController extends AbstractController
         ]);
     }
 
-    #[Route('/series/details/{series_id}', name: 'app_serie_details')]
-    public function seriesDetails($series_id, CallApiService $callApiService)
+    #[Route('/serie/details/{serie_id}', name: 'app_serie_details')]
+    public function seriesDetails($serie_id, CallApiService $callApiService)
     {
-        $serie = $callApiService->getSeriesDetails($series_id);
+        $serie = $callApiService->getSeriesDetails($serie_id);
 
         return $this->render('series/details.html.twig', [
             'serie' => $serie

@@ -48,9 +48,9 @@ class CallApiService
         return $response->toArray();
     }
 
-    public function getSeriesDetails($series_id)
+    public function getSeriesDetails($serie_id)
     {
-        $response = $this->client->request('GET', "https://api.themoviedb.org/3/tv/{$series_id}?language=fr-FR", [
+        $response = $this->client->request('GET', "https://api.themoviedb.org/3/tv/{$serie_id}?language=fr-FR", [
             'headers' => [
                 'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8',
                 'accept' => 'application/json',

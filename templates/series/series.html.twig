@@ -17,7 +17,7 @@
             <div class="row">
                 {% for serie in series['results'] %}
                     <div class="col-md-12 col-lg-6 col-xl-4">
-                        <a href="{{ path('app_serie_details', {'series_id': serie['id']}) }}">
+                        <a href="{{ path('app_serie_details', {'serie_id': serie['id']}) }}">
                             <div class="card mb-2 bg-gradient-dark">
                                 <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{ serie['backdrop_path'] }}"
                                      alt="Dist Photo 1">
