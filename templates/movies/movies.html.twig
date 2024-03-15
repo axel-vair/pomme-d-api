@@ -18,7 +18,7 @@
                 <div class="row">
                     {% for movie in movies['results'] %}
                         <div class="col-md-12 col-lg-6 col-xl-4">
-                            <a href="{{ path('app_movie_details', {movie_id: movie['id']}) }}">
+                            <a href="{{ path('app_movie_details', {movie_id: movie['id']}) }}" data-turbo-frame="_top">
                                 <div class="card mb-2 bg-gradient-dark">
                                     <img class="card-img-top"
                                          src="https://image.tmdb.org/t/p/w500/{{ movie['backdrop_path'] }}"
