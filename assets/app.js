@@ -7,4 +7,4 @@ import './bootstrap.js';
  */
 import './styles/app.css';
 import 'admin-lte/dist/css/adminlte.min.css'
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+import 'fontawesome-free/css/all.css'
