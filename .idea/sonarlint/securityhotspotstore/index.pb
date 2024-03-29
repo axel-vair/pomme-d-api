@@ -19,3 +19,15 @@ Q
 !templates/series/series.html.twig,4/c/4c9f6059b54f26417c36d7f22d25d073b5e9c061
 R
 "templates/series/details.html.twig,4/a/4a3700157d9e48161b8e6801d127173667b9d8a6
+Y
+)src/Controller/RegistrationController.php,b/6/b6a5dce1eac6107738aa6c9b363b605aa2315b2c
+Q
+!src/Controller/UserController.php,8/7/87b99206717ccce222f05190f36b6273e3ea6228
+U
+%src/Controller/SecurityController.php,7/c/7cc876ecdb4df676c79a6188e9f3ac45e5079434
+Q
+!config/packages/asset_mapper.yaml,c/c/cc0561f54243b13792cbac55f3b023ab318abd39
+V
+&assets/controllers/hello_controller.js,b/5/b5aea0f996f6645c77ef6ac38e15316374d0fba2
+X
+(assets/controllers/general_controller.js,1/d/1de390595ddb246347545f308bd3c70131f45a76
