@@ -34,7 +34,11 @@
         <div class="sidebar">
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <a href="#" class="d-block">Axel Vair</a>
+                    {% if app.request.attributes.get('user_email') %}
+                        <a>{{ app.request.attributes.get('user_email') }}</a>
+                    {% else %}
+                        <a href="{{ path('app_login') }}">Non connecté</a>
+                    {% endif %}
                 </div>
             </div>
             <nav class="mt-2">

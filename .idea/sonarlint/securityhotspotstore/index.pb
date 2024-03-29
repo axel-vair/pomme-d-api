@@ -45,3 +45,11 @@ E
 compose.yaml,2/7/2701071a1490f4576d914b0b84bc3185e0aa2854
 W
 'src/Security/LoginFormAuthenticator.php,5/8/58103073fd1d1900e366a38250f7db278e4f59eb
+D
+config/services.yaml,8/7/87042d1f46b57381244d70e7a42feeb7710727dc
+q
+Asrc/Controller/EventSubscriber/ControllerSubscriberController.php,6/1/619b915ee3cfdc572fd42b950dfe9307432a0fc7
+f
+6src/EventSubscriber/ControllerSubscriberController.php,b/f/bfc816c7f70f29dbd35e9341ecba53938aa2f8b7
+\
+,src/EventSubscriber/ControllerSubscriber.php,2/9/29c24a4d44c37d22840368a2120313f57c6e833a
