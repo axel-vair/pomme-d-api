@@ -20,7 +20,7 @@
                 </button>
             </li>
         </ul>
-        {% if app.request.attributes.get('user_email') %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <div class="w-100">
                 <a href="{{ path('app_logout') }}" class="btn btn-sm btn-outline-primary float-right">Se déconnecter</a>
                 <a href="{{ path('app_login') }}" class="btn btn-sm btn-primary float-right mr-2">Mon profil</a>
