@@ -31,3 +31,13 @@ V
 &assets/controllers/hello_controller.js,b/5/b5aea0f996f6645c77ef6ac38e15316374d0fba2
 X
 (assets/controllers/general_controller.js,1/d/1de390595ddb246347545f308bd3c70131f45a76
+Y
+)templates/registration/register.html.twig,1/c/1c8c7e669830383faba8ed6ab3baf68e465540f5
+V
+&templates/registration/index.html.twig,0/5/054407e8d0edc077f617b259fddabc52165adc35
+Q
+!src/Form/RegistrationFormType.php,9/5/95d4b58438357928efb9c5a862a6d289d874e878
+R
+"templates/security/login.html.twig,8/9/89d5f9595fc54c90b0c2626c3e5e07e23a679864
+E
+src/Form/UserType.php,6/c/6c2442a67dda9c3193b965c65ce788acf9b5ecaf
