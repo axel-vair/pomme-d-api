@@ -41,3 +41,7 @@ R
 "templates/security/login.html.twig,8/9/89d5f9595fc54c90b0c2626c3e5e07e23a679864
 E
 src/Form/UserType.php,6/c/6c2442a67dda9c3193b965c65ce788acf9b5ecaf
+<
+compose.yaml,2/7/2701071a1490f4576d914b0b84bc3185e0aa2854
+W
+'src/Security/LoginFormAuthenticator.php,5/8/58103073fd1d1900e366a38250f7db278e4f59eb
