@@ -20,10 +20,17 @@
                 </button>
             </li>
         </ul>
+        {% if app.request.attributes.get('user_email') %}
+            <div class="w-100">
+                <a href="{{ path('app_logout') }}" class="btn btn-sm btn-outline-primary float-right">Se déconnecter</a>
+                <a href="{{ path('app_login') }}" class="btn btn-sm btn-primary float-right mr-2">Mon profil</a>
+            </div>
+        {% else %}
         <div class="w-100">
             <a href="{{ path('app_register') }}" class="btn btn-sm btn-outline-primary float-right">Inscription</a>
             <a href="{{ path('app_login') }}" class="btn btn-sm btn-primary float-right mr-2">Connexion</a>
         </div>
+        {% endif %}
     </nav>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="{{ path('app_trend') }}" class="brand-link">
