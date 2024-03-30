@@ -1,18 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
-
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    <div class="card card-primary w-50 d-flex">
+        <div class="card-header">
+            <h3 class="card-title">Formulaire d'inscription</h3>
+        </div>
+        <div class="card-body">
+            {{ form(registrationForm) }}
+        </div>
+    </div>
 {% endblock %}

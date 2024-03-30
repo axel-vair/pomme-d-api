@@ -20,6 +20,17 @@
                 </button>
             </li>
         </ul>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div class="w-100">
+                <a href="{{ path('app_logout') }}" class="btn btn-sm btn-outline-primary float-right">Se déconnecter</a>
+                <a href="{{ path('app_login') }}" class="btn btn-sm btn-primary float-right mr-2">Mon profil</a>
+            </div>
+        {% else %}
+            <div class="w-100">
+                <a href="{{ path('app_register') }}" class="btn btn-sm btn-outline-primary float-right">Inscription</a>
+                <a href="{{ path('app_login') }}" class="btn btn-sm btn-primary float-right mr-2">Connexion</a>
+            </div>
+        {% endif %}
     </nav>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="{{ path('app_trend') }}" class="brand-link">
@@ -30,7 +41,12 @@
         <div class="sidebar">
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <a href="#" class="d-block">Axel Vair</a>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                       <a>{{ app.user.email }}</a>
+                    {% else %}
+                        <a href="{{ path('app_login') }}">Non connecté</a>
+
+                    {% endif %}
                 </div>
             </div>
             <nav class="mt-2">
@@ -61,7 +77,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">{%block title %}Trends{% endblock %}</h1>
+                        <h1 class="m-0">{% block title %}Trends{% endblock %}</h1>
                     </div>
                     <div class="col-sm-6">
                         {% block breadcrumb %}
