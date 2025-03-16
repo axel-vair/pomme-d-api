@@ -36,11 +36,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+/*    #[ORM\Column(length: 255, nullable: true)]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $lastname = null;
+    private ?string $lastname = null;*/
 
     #[ORM\ManyToMany(targetEntity: Favorite::class, inversedBy: 'users')]
     private Collection $favorite;
@@ -125,7 +125,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getFirstname(): ?string
+   /* public function getFirstname(): ?string
     {
         return $this->firstname;
     }
@@ -147,7 +147,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->lastname = $lastname;
 
         return $this;
-    }
+    }*/
 
     /**
      * @return Collection<int, Favorite>

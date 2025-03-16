@@ -47,3 +47,7 @@ W
 'src/Security/LoginFormAuthenticator.php,5/8/58103073fd1d1900e366a38250f7db278e4f59eb
 D
 config/services.yaml,8/7/87042d1f46b57381244d70e7a42feeb7710727dc
+C
+src/Entity/User.php,0/a/0a3e99b9da178509aeb5b3fa6f5dce46bc0eb8be
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a

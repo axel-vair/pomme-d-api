@@ -1,11 +1,13 @@
 
-Œphp:S103"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8…¦¿óã1J$81554a85-1a96-4fc6-8262-c939a8819824
-Œphp:S103"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8…¦¿óã1J$8346ce8d-a7f2-4715-98ba-c77b7ccd6dcf
-Œphp:S103+"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8…¦¿óã1J$9ec9426d-83b9-4077-ba3e-4d68464cf4b4
-Œphp:S1037"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8…¦¿óã1J$868d96da-ef8c-4ce5-b15e-2e0804b09072
-Œphp:S103A"KSplit this 125 characters long line (which is greater than 120 authorized).(é°¯8…¦¿óã1J$54a0553b-b330-4116-aa76-a66cc5649c7a
-Œphp:S103C"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8†¦¿óã1J$f08f03e4-e5ff-4caf-8588-423040876db6
-‘php:S103M"KSplit this 122 characters long line (which is greater than 120 authorized).(ÉÖ¹™ûÿÿÿÿ8ëÓÁóã1J$49d6a1f3-4e27-44a9-9201-c231615feafa
-Œphp:S103O"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8ˆÙŞóã1J$9230c373-a94d-4164-be12-ddd61f49a8fe
-Ş	php:S1192"›Define a constant instead of duplicating this literal "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8" 6 times.(ïƒ¢¸8†¦¿óã1J$8f6882ee-20bd-4b64-9d57-b3329f5c8bfe
-˜	php:S1192"QDefine a constant instead of duplicating this literal "application/json" 6 times.(ØàÁÓüÿÿÿÿ8†¦¿óã1J$dabab7bf-3c34-427c-b756-3621fcdd7cb8
+Œphp:S103"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$276d1afa-fe71-4470-89d3-c01e18628cdb
+Œphp:S103""KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$316fa1a3-4273-4d77-94fd-b91182f0d62b
+Œphp:S103."KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$cffea236-a0a0-431a-8abe-278178cb693e
+Œphp:S103:"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$be6e620b-d66c-4de4-83d8-60952218aaee
+Œphp:S103D"KSplit this 125 characters long line (which is greater than 120 authorized).(é°¯8Ù«™é1J$b703ddba-db9a-4232-ba10-836fd33ed3c4
+Œphp:S103F"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$19e69c98-156c-4ece-8488-9d2586b5b77c
+‘php:S103P"KSplit this 122 characters long line (which is greater than 120 authorized).(ÉÖ¹™ûÿÿÿÿ8Ù«™é1J$66d32be6-b007-4e2b-9eb9-23fdabae30d9
+Œphp:S103R"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$d290cf52-614e-481b-9fe4-ce05b9eb270a
+Œphp:S103`"KSplit this 256 characters long line (which is greater than 120 authorized).(ïƒ¢¸8Ù«™é1J$32e4ca20-c712-4e6e-9991-11df62fff7eb
+Ş	php:S1192"›Define a constant instead of duplicating this literal "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDhjOWQxMWUwYTcwZmRhZmZkZDI3OTcyY2Y3N2IwMiIsInN1YiI6IjY1ZjJjOTBkNmRlYTNhMDE2MzdhMTZjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fZrs8zPfUYmNGgoKFAfYDLFQTBw8qjzTo7DwNhnb9J8" 7 times.(ïƒ¢¸8Ù«™é1J$f09ec112-39c8-4dc1-9b95-23e13462f9ae
+˜	php:S1192"QDefine a constant instead of duplicating this literal "application/json" 7 times.(ØàÁÓüÿÿÿÿ8Ù«™é1J$11d113b9-0aea-4588-a883-40ef9eb9f5c8
+u	php:S1481^".Remove this unused "$response" local variable.(³„¢«üÿÿÿÿ8Ú«™é1J$527f99ba-27cb-435c-91a0-f5171ad785a2

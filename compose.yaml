@@ -7,8 +7,3 @@ services:
       POSTGRES_DB: app
     ports:
       - '5432:5432'
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - '9080:8080'

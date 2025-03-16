@@ -64,6 +64,11 @@ class MovieController extends AbstractController
         ]);
     }
 
+    #[Route('/add/movie/{movie_id}')]
+    public function test(CallApiService $callApiService)
+    {
+        $favorite = $callApiService->addMovieToFavorites();
+    }
 
 
 }
